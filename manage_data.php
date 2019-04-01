@@ -19,6 +19,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/index.php">Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_patient.php">Doctor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_medicine.php">Medicine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_patient.php">Patient</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_tests.php">Test</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +49,7 @@
         <h1 class="display-4">Manage doctor's data</h1>
         <div class="container text-center">
             <p class="lead text-justify">Using the following link you can add a new doctor, maintain his records, edit their information and also delete them if they are no longer needed.</p>
-            <a href="#" class="btn btn-outline-primary">Manage Doctor's Data</a>
+            <a href="/manage/manage_doctor.php" class="btn btn-outline-primary">Manage Doctor's Data</a>
         </div>
     </div>
 
@@ -45,7 +57,7 @@
         <h1 class="display-4">Manage Patient's Data</h1>
         <div class="container text-center">
             <p class="lead text-justify">Using the following link you can maintain the information of the patients, their diagnosis, past illness, patient details etc and modify or delete them anytime in the future.</p>
-            <a href="#" class="btn btn-outline-primary">Manage Patient's Data</a>
+            <a href="/manage/manage_patient.php" class="btn btn-outline-primary">Manage Patient's Data</a>
         </div>
     </div>
 
@@ -53,7 +65,15 @@
         <h1 class="display-4">Manage Medicine's Data</h1>
         <div class="container text-center">
             <p class="lead text-justify">Using the following link you can manage the available medicines in present in the hospitals inventory. To manage hospitals inventory efficiently.</p>
-            <a href="#" class="btn btn-outline-primary">Manage Medicine's</a>
+            <a href="/manage/manage_medicine.php" class="btn btn-outline-primary">Manage Medicine's</a>
+        </div>
+    </div>
+
+    <div class="container text-center my-4 col-lg-6 col-xl-6">
+        <h1 class="display-4">Manage Test's Data</h1>
+        <div class="container text-center">
+            <p class="lead text-justify">Using the following link you can manage data on the patients tests.</p>
+            <a href="/manage/manage_tests.php" class="btn btn-outline-primary">Manage Test's</a>
         </div>
     </div>
     
