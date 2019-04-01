@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <title>Page Title</title>
+    <title>Manage Doctor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
@@ -87,9 +87,82 @@
         </div>
     </div>
 
+    <div class="container text-center my-4 col-lg-6 col-xl-6">
+        <h1 class="display-4">Update Doctor's Information</h1>
+        <p class="text-justify lead">Please select the information that you want to update with the information that you want it to change it to.</p>
+        <div class="container text-center col-lg-7 col-xl-7">
+            <form method="POST" action="manage_doctor.php">
+                <div class="form-group">
+                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old vlaue">
+                    <label for="column">Select Information to change</label>
+                    <select class="form-control my-2" name="column" id="column">
+                        <option value="doctor_name">Doctor name</option>
+                        <option value="department">Department</option>
+                        <option value="phone_number">Phone number</option>
+                        <option value="address">Address</option>
+                    </select>
+                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new vlaue">
+                    <input type="submit" class="form-control my-2" value="Update" name="update">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container text-center my-4 col-lg-6 col-xl-6">
+        <h1 class="display-4">Delete Doctor's Information</h1>
+        <p class="text-justify lead">Please select the information that you want to change with the information that you want it to change it to.</p>
+        <div class="container text-center col-lg-7 col-xl-7">
+            <form method="POST" action="manage_doctor.php">
+                <div class="form-group">
+                    <form method="POST" action="manage_doctor.php">
+                        <label for="del_val">Select doctor's name to delete</label>
+                        <select class="form-control my-2" name="delval" id="del_val">
+                            <?php
+                                dispoption();
+                                function dispoption(){
+                                    global $conn;
+                                    $sql = "SELECT doctor_name FROM doctor_info";
+                                    $result = $conn->query($sql);
+                                    if($result->num_rows > 0){
+                                        while($row = $result->fetch_assoc()){
+                                            echo "<option value=".$row["doctor_name"].">".$row["doctor_name"]."</option>";
+                                        }
+                                    }
+                                }
+                            ?>
+                        </select>
+                        <input type="submit" class="form-control my-2" value="Delete" name="delete">
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <?php
         if(isset($_POST["add"])){
             add_doc();
+        }
+        if(isset($_POST["update"])){
+            update_doc();
+        }
+        if(isset($_POST["delete"])){
+            delete();
+        }
+        function delete(){
+            global $conn;
+            if(isset($_POST["delval"])){
+                $val = $_POST["delval"];
+                $sql = "DELETE FROM doctor_info WHERE doctor_name='$val'";
+                $conn->query($sql);
+            }
+        }
+        function update_doc(){
+            global $conn;
+            $oldval = $_POST["oldval"];
+            $column = $_POST["column"];
+            $newval = $_POST["newval"];
+            $sql = "UPDATE doctor_info SET $column='$newval' WHERE $column='$oldval'";
+            $conn->query($sql);
         }
         function add_doc(){
             global $conn;
@@ -97,8 +170,11 @@
             $dep = $_POST["dep"];
             $number = $_POST["number"];
             $address= $_POST["address"];
-            $sql = "INSERT INTO doctor_info VALUES ('$dname','$dep',$number,'$address')";
-            $conn->query($sql);
+            if(($dname and $dep and $number and $address) != NULL){
+                $sql = "INSERT INTO doctor_info VALUES ('$dname','$dep',$number,'$address')";
+                $conn->query($sql);
+                echo "<p class='lead'>Deleted!</p>";
+            }
         }
     ?>
     
