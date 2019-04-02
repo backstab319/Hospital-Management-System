@@ -35,13 +35,23 @@
         </navbar>
     </div>
 
-    <div class="container jumbotron text-center my-4 col-lg-6 col-xl-6">
-        <h1 class="display-4">Welcome to HMS!</h1>
-        <div class="container text-center">
-            <p class="lead">Please use the following link or the link provided in the navbar to manage your hospitals data.</p>
-            <a href="/manage_data.php" class="btn btn-outline-primary">Manage Hospitals Data</a>
+    <div class="background">
+
+    <div class="overlay">
+
+    <div class="container jumbotron text-center col-lg-6 col-xl-6 jumbo">
+        <h1 class="display-4 text-light">Welcome to HMS!</h1>
+        <div class="container text-center text-light">
+            <p class="lead text-light">Please use the following link or the link provided in the navbar to manage your hospitals data.</p>
+            <a href="/manage_data.php" class="btn btn-outline-light">Manage Hospitals Data</a>
         </div>
     </div>
+
+    </div>
+
+    </div>
+
+    <div class="overlay1">
 
     <div class="container text-center my-4 col-lg-6 col-xl-6" id="about">
         <h1 class="display-4">What is HMS?</h1>
@@ -89,6 +99,8 @@
             </ul>
         </div>
     </div>
+
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
