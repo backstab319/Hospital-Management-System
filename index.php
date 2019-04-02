@@ -56,11 +56,11 @@
         <h1 class="display-4">Objectives of HMS</h1>
         <div class="container text-center">
             <ul class="list-group">
-                <li class="list-group-item">Hospital Management System is to manage the details of the hospital</li>
-                <li class="list-group-item">It manages all the information about hospital, medicines, tests.</li>
-                <li class="list-group-item">The purpose of this project is to build an application program to reduce the manual 
+                <li class="list-group-item my-2 rounded">Hospital Management System is to manage the details of the hospital</li>
+                <li class="list-group-item my-2 rounded">It manages all the information about hospital, medicines, tests.</li>
+                <li class="list-group-item my-2 rounded">The purpose of this project is to build an application program to reduce the manual 
                 work for managing the hospital, doctors, medicines, patients etc.</li>
-                <li class="list-group-item">Tracks all the details about the patients, employees and tests.</li>
+                <li class="list-group-item my-2 rounded">Tracks all the details about the patients, employees and tests.</li>
             </ul>
         </div>
     </div>
@@ -69,8 +69,8 @@
         <h1 class="display-4">Problems</h1>
         <div class="container text-center">
             <ul class="list-group">
-                <li class="list-group-item">Keeping record for longer duration is difficult.</li>
-                <li class="list-group-item">Standing in the queue for taking the appointment.</li>
+                <li class="list-group-item my-2 rounded">Keeping record for longer duration is difficult.</li>
+                <li class="list-group-item my-2 rounded">Standing in the queue for taking the appointment.</li>
             </ul>
         </div>
     </div>
@@ -80,12 +80,12 @@
         <div class="container text-center">
             <p class="lead">This project is developed by Yajya Pandey of BCA VI SEM. Languages used are,</p>
             <ul class="list-group">
-                <li class="list-group-item">HTML</li>
-                <li class="list-group-item">CSS</li>
-                <li class="list-group-item">Bootstrap</li>
-                <li class="list-group-item">Javascript</li>
-                <li class="list-group-item">MySQL</li>
-                <li class="list-group-item">PHP</li>
+                <li class="list-group-item my-2 rounded">HTML</li>
+                <li class="list-group-item my-2 rounded">CSS</li>
+                <li class="list-group-item my-2 rounded">Bootstrap</li>
+                <li class="list-group-item my-2 rounded">Javascript</li>
+                <li class="list-group-item my-2 rounded">MySQL</li>
+                <li class="list-group-item my-2 rounded">PHP</li>
             </ul>
         </div>
     </div>
