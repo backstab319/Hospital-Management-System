@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <title>Page Title</title>
+    <title>Manage Medicine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
@@ -30,6 +30,7 @@
         <h1 class="display-4">Manage Medicine's Data</h1>
         <div class="container">
             <p class="lead text-justify text-center">You can keep track of all the medicines available in the hospital using the following tools.</p>
+            <a class="btn btn-outline-primary" href="/manage/secondary/medicine_secondary.php">Medicine Additional Info</a>
         </div>
     </div>
     
