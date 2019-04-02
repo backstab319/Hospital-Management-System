@@ -154,6 +154,16 @@
                 $val = $_POST["delval"];
                 $sql = "DELETE FROM doctor_info WHERE doctor_name='$val'";
                 $conn->query($sql);
+                $sql = "SELECT * FROM doctor_secondary WHERE doctor_name='$val'";
+                $result = $conn->query($sql);
+                if($result->num_rows > 0){
+                    deleteadd($val);
+                }
+            }
+            function deleteadd($val){
+                global $conn;
+                $sql = "DELETE FROM doctor_secondary WHERE doctor_name='$val'";
+                $conn->query($sql);
             }
         }
         function update_doc(){
