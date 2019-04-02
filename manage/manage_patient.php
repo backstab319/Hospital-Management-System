@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <title>Page Title</title>
+    <title>Manage Patient</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
@@ -30,6 +30,7 @@
         <h1 class="display-4">Manage Patient's Data</h1>
         <div class="container">
             <p class="lead text-justify text-center">The Patient's Data can be managed using the following provided tools.</p>
+            <a class="btn btn-outline-primary" href="/manage/secondary/patient_secondary.php">Patient Additional Info</a>
         </div>
     </div>
     
