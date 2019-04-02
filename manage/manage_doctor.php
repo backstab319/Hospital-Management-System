@@ -34,6 +34,7 @@
         <h1 class="display-4">Manage Doctor's Data</h1>
         <div class="container">
             <p class="lead text-justify text-center">The Doctor's Data can be managed using the following provided tools.</p>
+            <a class="btn btn-outline-primary" href="/manage/secondary/doctor_secondary.php">Doctor Additional Info</a>
         </div>
     </div>
 
