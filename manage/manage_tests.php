@@ -34,7 +34,6 @@
         <h1 class="display-4">Manage Patient's Test Data</h1>
         <div class="container">
             <p class="lead text-justify text-center">You can keep track of all the various tests on the patients using the following tools.</p>
-            <a class="btn btn-outline-primary" href="/manage/secondary/tests_secondary.php">Test's Additional Info</a>
         </div>
     </div>
 
@@ -94,7 +93,7 @@
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="manage_tests.php">
                 <div class="form-group">
-                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old vlaue">
+                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old value">
                     <label for="column">Select Information to change</label>
                     <select class="form-control my-2" name="column" id="column">
                         <option value="name">Patient name</option>
@@ -102,7 +101,7 @@
                         <option value="test_result">Test Result</option>
                         <option value="diagnosis">Diagnosis</option>
                     </select>
-                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new vlaue">
+                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new value">
                     <input type="submit" class="form-control my-2" value="Update" name="update">
                 </div>
             </form>
