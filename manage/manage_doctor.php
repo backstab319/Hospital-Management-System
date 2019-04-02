@@ -94,7 +94,7 @@
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="manage_doctor.php">
                 <div class="form-group">
-                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old vlaue">
+                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old value">
                     <label for="column">Select Information to change</label>
                     <select class="form-control my-2" name="column" id="column">
                         <option value="doctor_name">Doctor name</option>
@@ -102,7 +102,7 @@
                         <option value="phone_number">Phone number</option>
                         <option value="address">Address</option>
                     </select>
-                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new vlaue">
+                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new value">
                     <input type="submit" class="form-control my-2" value="Update" name="update">
                 </div>
             </form>
@@ -169,6 +169,10 @@
             $oldval = $_POST["oldval"];
             $column = $_POST["column"];
             $newval = $_POST["newval"];
+            if($column == "doctor_name"){
+                $sql = "DELETE FROM doctor_secondary WHERE doctor_name='$oldval'";
+                $conn->query($sql);
+            }
             $sql = "UPDATE doctor_info SET $column='$newval' WHERE $column='$oldval'";
             $conn->query($sql);
         }
