@@ -112,10 +112,9 @@
     <div class="container text-center my-4 col-lg-6 col-xl-6">
         <h1 class="display-4">Delete Doctor's Information</h1>
         <div class="container text-center col-lg-7 col-xl-7">
-            <form method="POST" action="manage_doctor.php">
-                <div class="form-group">
-                    <form method="POST" action="manage_doctor.php">
-                        <label for="del_val">Select doctor's name to delete</label>
+            <div class="form-group">
+                <form method="POST" action="manage_doctor.php">
+                    <label for="del_val">Select doctor's name to delete</label>
                         <select class="form-control my-2" name="delval" id="del_val">
                             <?php
                                 dispoption();
@@ -131,10 +130,9 @@
                                 }
                             ?>
                         </select>
-                        <input type="submit" class="form-control my-2" value="Delete" name="delete">
-                    </form>
-                </div>
-            </form>
+                    <input type="submit" class="form-control my-2" value="Delete" name="delete">
+                </form>
+            </div>
         </div>
     </div>
 
