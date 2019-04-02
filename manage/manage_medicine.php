@@ -84,7 +84,7 @@
                     <input type="number" class="form-control my-2" name="mg" placeholder="MG">
                     <input type="text" class="form-control my-2" name="des" placeholder="Description">
                     <input type="number" class="form-control my-2" name="price" placeholder="Price">
-                    <input type="submit" class="form-control my-2 btn btn-outline-primary" value="Add Doctor" name="add">
+                    <input type="submit" class="form-control my-2 btn btn-outline-primary" value="Add Medicine" name="add">
                 </div>
             </form>
         </div>
@@ -96,7 +96,7 @@
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="manage_medicine.php">
                 <div class="form-group">
-                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old vlaue">
+                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old value">
                     <label for="column">Select Information to change</label>
                     <select class="form-control my-2" name="column" id="column">
                         <option value="name">Medicine name</option>
@@ -105,7 +105,7 @@
                         <option value="description">Description</option>
                         <option value="price">Price</option>
                     </select>
-                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new vlaue">
+                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new value">
                     <input type="submit" class="form-control my-2" value="Update" name="update">
                 </div>
             </form>
