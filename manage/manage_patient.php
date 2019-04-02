@@ -112,7 +112,7 @@
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="manage_patient.php">
                 <div class="form-group">
-                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old vlaue">
+                    <input type="text" class="form-control my-2" name="oldval" placeholder="Enter old value">
                     <label for="column">Select Information to change</label>
                     <select class="form-control my-2" name="column" id="column">
                         <option value="name">Patient's name</option>
@@ -122,7 +122,7 @@
                         <option value="number">Phone Number</option>
                         <option value="blood_group">Blood Group</option>
                     </select>
-                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new vlaue">
+                    <input type="text" class="form-control my-2" name="newval" placeholder="Enter new value">
                     <input type="submit" class="form-control my-2" value="Update" name="update">
                 </div>
             </form>
@@ -170,17 +170,9 @@
             global $conn;
             if(isset($_POST["delval"])){
                 $val = $_POST["delval"];
-                $sql = "DELETE FROM patient_info WHERE name='$val'";
-                $conn->query($sql);
-                $sql = "SELECT * FROM patient_secondary WHERE doctor_name='$val'";
-                $result = $conn->query($sql);
-                if($result->num_rows > 0){
-                    deleteadd($val);
-                }
-            }
-            function deleteadd($val){
-                global $conn;
                 $sql = "DELETE FROM patient_secondary WHERE name='$val'";
+                $conn->query($sql);
+                $sql = "DELETE FROM patient_info WHERE name='$val'";
                 $conn->query($sql);
             }
         }
@@ -189,6 +181,10 @@
             $oldval = $_POST["oldval"];
             $column = $_POST["column"];
             $newval = $_POST["newval"];
+            if($column == "name"){
+                $sql = "DELETE FROM patient_secondary WHERE $column='$oldval'";
+                $conn->query($sql);
+            }
             $sql = "UPDATE patient_info SET $column='$newval' WHERE $column='$oldval'";
             $conn->query($sql);
         }
