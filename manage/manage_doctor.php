@@ -111,7 +111,6 @@
 
     <div class="container text-center my-4 col-lg-6 col-xl-6">
         <h1 class="display-4">Delete Doctor's Information</h1>
-        <p class="text-justify lead">Please select the information that you want to change with the information that you want it to change it to.</p>
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="manage_doctor.php">
                 <div class="form-group">
@@ -184,7 +183,6 @@
             if(($dname and $dep and $number and $address) != NULL){
                 $sql = "INSERT INTO doctor_info VALUES ('$dname','$dep',$number,'$address')";
                 $conn->query($sql);
-                echo "<p class='lead'>Deleted!</p>";
             }
         }
     ?>
