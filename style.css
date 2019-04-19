@@ -5,6 +5,7 @@
     background: url(/hospital.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 665px;
 }
 .overlay{
     height: 665px;
