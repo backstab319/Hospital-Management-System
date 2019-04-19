@@ -17,6 +17,9 @@
                     <div class="navbar-menu ml-auto">
                         <ul class="navbar-nav">
                             <li class="nav-item">
+                                <a class="nav-link" href="signup.php">Sign up</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#about">About</a>
                             </li>
                             <li class="nav-item">
@@ -39,12 +42,41 @@
 
     <div class="overlay">
 
-    <div class="container jumbotron text-center col-lg-6 col-xl-6 jumbo">
-        <h1 class="display-4 text-light">Welcome to HMS!</h1>
+    <div class="container jumbotron text-center col-lg-4 col-xl-4 jumbo">
+        <h1 class="display-4 text-light">HMS Login</h1>
         <div class="container text-center text-light">
-            <p class="lead text-light">Please use the following link or the link provided in the navbar to manage your hospitals data.</p>
-            <a href="/manage_data.php" class="btn btn-outline-light">Manage Hospitals Data</a>
+            <p class="lead text-light">Login to get appointment and avail other benefits from hospital</p>
+            <div class="form-group">
+                    <form action="index.php" method="POST">
+                    <input type="text" placeholder="Username" name="username" class="form-control mb-2">
+                    <input type="password" placeholder="Password" name="password" class="form-control mb-2">
+                    <input type="submit" value="Login" name="login" class="form-control btn btn-primary">
+                </form>
+            </div>
         </div>
+        <?php
+            if(isset($_POST["login"])){
+                login();
+            }
+            function login(){
+                include "connect.php";
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+                $sql = "SELECT * FROM login_details WHERE username='$username' AND password='$password'";
+                $result = $conn->query($sql);
+                redirect($result);
+            }
+            function redirect($result){
+                $row = $result->fetch_assoc();
+                if($row["user_type"] == 'admin'){
+                    echo "<script type='text/javascript'>document.location = 'manage_data.php';</script>";
+                    exit();
+                }else{
+                    echo "<script type='text/javascript'>document.location = 'user_page.php';</script>";
+                    exit();
+                }
+            }
+        ?>
     </div>
 
     </div>
