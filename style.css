@@ -7,6 +7,24 @@
     background-size: cover;
     height: 665px;
 }
+.blood_donation{
+    background: url(/blood_camp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+.appointment{
+    background: url(/appointment.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+.bloodcamp{
+    background: url(/blood_camp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
 .overlay{
     height: 665px;
     background: rgba(0, 0, 0, 0.3);
