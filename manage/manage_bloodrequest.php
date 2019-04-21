@@ -55,7 +55,6 @@
                     </tr>
                     </thead>';
                     while($row = $result->fetch_assoc()){
-                        
                         echo "<tr><td>".$row['name']."</td><td>".$row['phone']."</td><td>".$row["blood_group"]."</td></tr>";
                     }
                     echo "</table>";
