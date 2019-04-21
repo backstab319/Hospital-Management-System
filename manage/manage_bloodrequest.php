@@ -17,7 +17,7 @@
                     <div class="navbar-menu ml-auto">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="">Home</a>
+                                <a class="nav-link" href="../manage_data.php">Home</a>
                             </li>
                         </ul>
                     </div>

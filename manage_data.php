@@ -17,7 +17,13 @@
                     <div class="navbar-menu ml-auto">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/manage/manage_patient.php">Doctor</a>
+                                <a class="nav-link" href="/manage/manage_blooddonation.php">Blood Donation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_bloodrequest.php">Blood Request</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/manage/manage_appointments.php">Appointments</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/manage/manage_medicine.php">Medicine</a>

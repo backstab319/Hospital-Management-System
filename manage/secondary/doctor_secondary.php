@@ -17,7 +17,7 @@
                     <div class="navbar-menu ml-auto">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="">Home</a>
+                                <a class="nav-link" href="../../manage_data.php">Home</a>
                             </li>
                         </ul>
                     </div>
@@ -101,7 +101,7 @@
                         <option value="salary">Salary</option>
                     </select>
                     <input type="text" class="form-control my-2" name="newval" placeholder="Enter new value">
-                    <input type="submit" class="form-control my-2" value="Update" name="update">
+                    <input type="submit" class="form-control my-2 btn btn-outline-primary" value="Update" name="update">
                 </div>
             </form>
         </div>
@@ -128,7 +128,7 @@
                                 }
                             ?>
                         </select>
-                    <input type="submit" class="form-control my-2" value="Delete" name="delete">
+                    <input type="submit" class="form-control my-2 btn btn-outline-primary" value="Delete" name="delete">
                 </form>
             </div>
         </div>

@@ -77,7 +77,7 @@
 
     <div class="container text-center text-justify col-lg-6 col-xl-6">
         <div class="form-group">
-            <form method="POST" action="manage_doctor.php">
+            <form method="POST" action="manage_appointments.php">
                 <label for="up_val">Select patients name to reschedule appointment</label>
                     <select class="form-control my-2" name="upval" id="up_val">
                         <?php
@@ -116,6 +116,7 @@
                 $time = $_POST["time"];
                 $sql = "UPDATE appointment SET time='$time' WHERE name='$upval'";
                 $conn->query($sql);
+                header("Location: manage_appointments.php");
             }
         ?>
     </div>
