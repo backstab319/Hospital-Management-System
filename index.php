@@ -1,3 +1,8 @@
+<?php
+    function userinit($username){
+        setcookie("user",$username,time()+1800,"/");
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -64,15 +69,17 @@
                 $password = $_POST["password"];
                 $sql = "SELECT * FROM login_details WHERE username='$username' AND password='$password'";
                 $result = $conn->query($sql);
-                redirect($result);
+                redirect($result,$username);
             }
-            function redirect($result){
+            function redirect($result,$username){
                 $row = $result->fetch_assoc();
                 if($row["user_type"] == 'admin'){
                     echo "<script type='text/javascript'>document.location = 'manage_data.php';</script>";
+                    userinit($username);
                     exit();
                 }else{
                     echo "<script type='text/javascript'>document.location = 'user_page.php';</script>";
+                    userinit($username);
                     exit();
                 }
             }
