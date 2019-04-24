@@ -84,7 +84,7 @@
                                 }
                             ?>
                         </select>
-                    <input type="submit" class="form-control my-2" value="Delete" name="delete">
+                    <input type="submit" class="form-control btn btn-outline-primary my-2" value="Delete" name="delete">
                 </form>
             </div>
         </div>
