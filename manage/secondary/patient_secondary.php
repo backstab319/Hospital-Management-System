@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div class="container text-center my-4 col-lg-6 col-xl-6">
+    <div class="container text-center my-4 col-lg-6 col-xl-6" id="add">
         <h1 class="display-4">Add Patient's Additional Information</h1>
         <div class="container text-center col-lg-7 col-xl-7">
             <form method="POST" action="patient_secondary.php">
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div class="container text-center my-4 col-lg-6 col-xl-6">
+    <div class="container text-center my-4 col-lg-6 col-xl-6" id="update">
         <h1 class="display-4">Update Patient's Additional Information</h1>
         <p class="text-justify lead">Please select the information that you want to update with the information that you want it to change it to.</p>
         <div class="container text-center col-lg-7 col-xl-7">
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <div class="container text-center my-4 col-lg-6 col-xl-6">
+    <div class="container text-center my-4 col-lg-6 col-xl-6" id="delete">
         <h1 class="display-4">Delete Patient's Additional Information</h1>
         <div class="container text-center col-lg-7 col-xl-7">
             <div class="form-group">
@@ -134,12 +134,15 @@
     <?php
         if(isset($_POST["add"])){
             add_patadditional();
+            echo "<script type='text/javascript'>document.location = 'patient_secondary.php/#add';</script>";
         }
         if(isset($_POST["update"])){
             update_patadd();
+            echo "<script type='text/javascript'>document.location = 'patient_secondary.php/#update';</script>";
         }
         if(isset($_POST["delete"])){
             delete();
+            echo "<script type='text/javascript'>document.location = 'patient_secondary.php/#delete';</script>";
         }
         function delete(){
             global $conn;
